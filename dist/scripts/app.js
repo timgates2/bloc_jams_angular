@@ -5,7 +5,8 @@
              requireBase: false
          });
          
-         $stateProvider.state('landing', {
+         $stateProvider
+         .state('landing', {
              url: '/',
              templateUrl: '/templates/landing.html'
          })
@@ -15,8 +16,8 @@
          })
          .state('collection', {
              url: '/collection',
-             templateUrl '/templates/collection.html'
-         });
+             templateUrl: '/templates/collection.html'
+         })
      }
      angular
          .module('blocJams', ['ui.router'])
