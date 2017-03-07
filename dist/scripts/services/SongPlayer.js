@@ -1,6 +1,6 @@
- (function() {
+(function() {
      function SongPlayer() {
-          var SongPlayer = {};
+         var SongPlayer = {};
          
          var currentSong = null;
          
@@ -8,6 +8,7 @@
             * @desc Buzz object audio file
             * @type {Object}
             */
+         
          var currentBuzzObject = null;
          
             /**
@@ -27,29 +28,40 @@
                 preload: true
             });
 
-
             currentSong = song;
          };
+        
+            /**
+            * @function playSong
+            * @desc Plays currently song and sets playing bool to true;
+            * @param {Object} song
+            */
          
-          SongPlayer.play = function(song) {
-              if (currentSong !== song) {
-                  setSong(song);
-                  currentBuzzObject.play();
-                  song.playing = true;
-              } else if (currentSong === song) {
-                  if (currentBuzzObject.isPaused()) {
-                      currentBuzzObject.play();
+         var playSong = function(song){
+             currentBuzzObject.play();
+             song.playing = true;
+         };
+         
+         SongPlayer.play = function(song) {
+             if (currentSong !== song) {
+           setSong(song);
+           currentBuzzObject.play();
+           song.playing = true;
+                  } else if (currentSong === song) {
+                      if (currentBuzzObject.isPaused()) {
+                          currentBuzzObject.play();
+                      }
                   }
-              }
-          };
-     
-          SongPlayer.pause = function(song) {
-              currentBuzzObject.pause();
-              song.playing = false;
-          };
+              };
+              
+              SongPlayer.pause = function(song) {
+                  currentBuzzObject.pause();
+                  song.playing = false;
+              };
          
-          return SongPlayer;
-     }
+         return SongPlayer;
+    };
+    
  
      angular
          .module('blocJams')
