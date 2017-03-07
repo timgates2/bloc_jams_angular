@@ -1,11 +1,11 @@
 (function() {
 
-    function AlbumCtrl() {
-        this.albumData = albumPicasso;
+    function AlbumCtrl(Fixtures, SongPlayer) {
+         this.albumData = Fixtures.getAlbum();
+         this.songPlayer = SongPlayer;
     }
  
     angular
         .module('blocJams')
-        .controller('AlbumCtrl', AlbumCtrl);
-    
-})();
+        .controller('AlbumCtrl', ['Fixtures', 'SongPlayer', AlbumCtrl]);
+ })();
