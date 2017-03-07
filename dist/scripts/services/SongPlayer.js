@@ -85,6 +85,23 @@
                       playSong(song);
                   }
               };
+                /**
+                * @function next
+                * @desc Gets the index of the song after the current song which is playing and plays song. stops at end.
+                */
+
+                SongPlayer.next = function() {
+                    var currentSongIndex = getSongIndex(SongPlayer.currentSong);
+                    currentSongIndex++;
+
+                if (currentSongIndex == currentAlbum.songs.length) {
+                    stopSong(SongPlayer.currentSong);
+                } else {
+                    var song = currentAlbum.songs[currentSongIndex];
+                    setSong(song);
+                    playSong(song);
+                }
+            };
          
          return SongPlayer;
     };
