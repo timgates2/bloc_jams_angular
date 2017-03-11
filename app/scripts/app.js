@@ -1,5 +1,5 @@
  (function() {
-              
+              /*$stateProvider.state(stateName, stateConfig)*/
      function config($stateProvider, $locationProvider) {
         $locationProvider
         .html5Mode({
@@ -7,14 +7,14 @@
             requireBase: false
         });
          $stateProvider
-            .state('landing', {
+            .state('landing' /* state name part*/, {
                 url: '/',
                 controller: 'LandingCtrl as landing',
-                templateUrl: '/templates/landing.html'
+                templateUrl: '/templates/landing.html' /*state config part*/
             })
             .state('album', {
             url: '/album',
-            controller: 'AlbumCtrl as album',
+            controller: 'AlbumCtrl as album', /*access album controller with "album." */
             templateUrl: '/templates/album.html'
          })
          .state('collection', {

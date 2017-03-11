@@ -1,11 +1,7 @@
  (function() {
      
      function seekBar($document) {
-    
-         
-
-
-         
+          
         var calculatePercent = function(seekBar, event) {
             var offsetX = event.pageX - seekBar.offset().left;
             var seekBarWidth = seekBar.width();
@@ -83,7 +79,7 @@
             
             
             }
-        }; // END OF RETURN
+        };
      }
  
      angular

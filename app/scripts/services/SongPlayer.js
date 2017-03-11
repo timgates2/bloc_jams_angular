@@ -1,5 +1,5 @@
  (function() {
-     function SongPlayer(Fixtures, $rootScope) { // constuctor fucntion
+     function SongPlayer(Fixtures, $rootScope) {
         var SongPlayer = {};
         
              /**
@@ -15,7 +15,7 @@
              * @type {Object}
              */
         
-        var currentAlbum = Fixtures.getAlbum(); //not we have currentAlbum in Fixtures
+        var currentAlbum = Fixtures.getAlbum();
         
              /**
              * @function setSong
@@ -166,7 +166,7 @@
         
         
         
-        return SongPlayer; // returned objecct to be injected.
+        return SongPlayer;
     };
     
 

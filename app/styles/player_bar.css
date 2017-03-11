@@ -7,12 +7,12 @@
      background-color: rgba(255, 255, 255, 0.3);
      z-index: 100;
  }
-
+ 
  .player-bar a {
      font-size: 1.1rem;
      vertical-align: middle;
- }
- 
+ } 
+
  .player-bar a,
  .player-bar a:hover {
      color: white;
@@ -38,6 +38,7 @@
      padding-right: 1rem;
  }
 
+ 
  .player-bar .main-controls .previous {
      margin-right: 16.5%;
  }
@@ -46,13 +47,13 @@
      margin-right: 15%;
      font-size: 1.6rem;
  }
-
+ 
  .player-bar .currently-playing {
      width: 50%;
      text-align: center;
      position: relative;
  }
- 
+
  .player-bar .currently-playing .song-name,
  .player-bar .currently-playing .artist-name,
  .player-bar .currently-playing .artist-song-mobile {
@@ -77,7 +78,7 @@
      display: none;
  }
 
-.seek-control {
+ .seek-control {
      position: relative;
      font-size: 0.8rem;
  }
@@ -120,10 +121,13 @@
      margin-top: -0.25rem;
      border-radius: 50%;
      cursor: pointer;
-     transition: width 100ms ease-in-out,
-             height 100ms ease-in-out,
-             margin-top 100ms ease-in-out,
-             margin-left 100ms ease-in-out;
+     -webkit-transition: all 100ms ease-in-out;
+        -moz-transition: all 100ms ease-in-out;
+             transition: all 100ms ease-in-out;
+             transition: width 100ms ease-in-out,
+                 height 100ms ease-in-out,
+                 margin-top 100ms ease-in-out,
+                 margin-left 100ms ease-in-out;
  }
  
  .seek-bar:hover .thumb {
@@ -132,12 +136,12 @@
      margin-top: -0.5rem;
      margin-left: -0.5rem;
  }
-
+ 
  .player-bar .volume {
      width: 25%;
      text-align: right;
  }
- 
+
  .player-bar .volume .icon {
      font-size: 1.1rem;
      display: inline-block;
@@ -149,6 +153,7 @@
      width: 5.75rem;
      vertical-align: middle;
  }
+
  
  @media (max-width: 640px) {
      .player-bar {
